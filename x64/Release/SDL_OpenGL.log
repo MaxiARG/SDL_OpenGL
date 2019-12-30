@@ -1,0 +1,8 @@
+﻿  SDL_OpenGL.cpp
+C:\Users\Maxi\source\repos\Integrated_Solution\SDL_OpenGL\SDL_OpenGL.cpp(128,3): warning C4551: la llamada a la función no tiene lista de argumentos
+C:\Users\Maxi\source\repos\Integrated_Solution\SDL_OpenGL\SDL_OpenGL.cpp(129,3): warning C4551: la llamada a la función no tiene lista de argumentos
+  Generando código
+  Compiler version has changed, fall back to full compilation.
+  All 355 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generación de código finalizada
+  SDL_OpenGL.vcxproj -> C:\Users\Maxi\source\repos\Integrated_Solution\x64\Release\SDL_OpenGL.exe
