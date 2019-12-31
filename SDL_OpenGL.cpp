@@ -11,14 +11,14 @@
 const int SCREEN_WIDTH = 720;
 const int SCREEN_HEIGHT = 480;
 void checkInput(bool& quit);
-boolean inicial_Graficos();
+boolean iniciar_Graficos();
 SDL_Window* gWindow = NULL;
 
 
 int main(int argc, char* args[])
 {
 	bool quit = false;
-	inicial_Graficos();
+	iniciar_Graficos();
 	MiShader shader("vertex.vs", "fragment.fs");
 	
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
@@ -162,7 +162,7 @@ SDL_Surface* loadSurface(std::string path)
 	return optimizedSurface;
 }
 */
-boolean inicial_Graficos() {
+boolean iniciar_Graficos() {
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 	{
 		printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
