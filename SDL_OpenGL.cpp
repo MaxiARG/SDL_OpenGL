@@ -11,39 +11,14 @@
 const int SCREEN_WIDTH = 720;
 const int SCREEN_HEIGHT = 480;
 void checkInput(bool& quit);
+boolean inicial_Graficos();
 SDL_Window* gWindow = NULL;
-
 
 
 int main(int argc, char* args[])
 {
-	//-----------------------
 	bool quit = false;
-	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
-	{
-		printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
-		return false;
-	}
-
-	gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL);
-	if (gWindow == nullptr)
-	{
-		printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
-		return false;
-	}
-
-	SDL_GLContext glcontext = SDL_GL_CreateContext(gWindow);
-	if (glcontext == NULL) {
-		printf("SDL_GLContext no se pudo rear\n");
-		return false;
-	}
-
-	GLenum error = glewInit();
-	if (error != GLEW_OK) {
-		printf("Error glewInit\n");
-		return false;
-	}
-
+	inicial_Graficos();
 	MiShader shader("vertex.vs", "fragment.fs");
 	
 	SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 1);
@@ -187,3 +162,31 @@ SDL_Surface* loadSurface(std::string path)
 	return optimizedSurface;
 }
 */
+boolean inicial_Graficos() {
+	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
+	{
+		printf("SDL could not initialize! SDL Error: %s\n", SDL_GetError());
+		return false;
+	}
+
+	gWindow = SDL_CreateWindow("SDL Tutorial", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_OPENGL);
+	if (gWindow == nullptr)
+	{
+		printf("Window could not be created! SDL Error: %s\n", SDL_GetError());
+		return false;
+	}
+
+	SDL_GLContext glcontext = SDL_GL_CreateContext(gWindow);
+	if (glcontext == NULL) {
+		printf("SDL_GLContext no se pudo rear\n");
+		return false;
+	}
+
+	GLenum error = glewInit();
+	if (error != GLEW_OK) {
+		printf("Error glewInit\n");
+		return false;
+	}
+
+	return true;
+}
