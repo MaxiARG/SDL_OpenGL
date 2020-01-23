@@ -9,11 +9,15 @@
 #include <sstream>
 #include <iostream>
 
-class MiShader
+class Shader
 {
+
 public:
-	unsigned int ID;
-	MiShader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr)
+	
+	GLint ID;
+	//unsigned int ID;
+
+	Shader(const char* vertexPath, const char* fragmentPath, const char* geometryPath = nullptr)
 	{
 		// 1. retrieve the vertex/fragment source code from filePath
 		std::string vertexCode;
