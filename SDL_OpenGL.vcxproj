@@ -154,22 +154,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Mesh.cpp" />
-    <ClCompile Include="Model3D.cpp" />
-    <ClCompile Include="Model3DLoader.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="SDL_OpenGL.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Mesh.h" />
-    <ClInclude Include="Model3D.h" />
-    <ClInclude Include="Model3DLoader.h" />
-    <ClInclude Include="OBJ_Loader.h" />
-    <ClInclude Include="Shader.h" />
-    <ClInclude Include="stb_image.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="fragment.fs" />
-    <None Include="vertex.vs" />
+    <ClInclude Include="Game.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
